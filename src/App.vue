@@ -1,18 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Popup @click.native="changeType" :type="editorType" :data="{ a: 1, b: 2 }" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Popup from './components/Popup';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Popup,
+  },
+  data() {
+    return {
+      editorType: "EditorB",
+    }
+  },
+  methods: {
+    changeType() {
+      if (this.editorType === "EditorA") {
+        this.editorType = "EditorB";
+      } else {
+        this.editorType = "EditorA";
+      }
+    }
+  },
 }
 </script>
 
