@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <Popup @click.native="changeType" :type="editorType" :data="{ a: 1, b: 2 }" />
+    <Popup 
+      @click.native="changeType" 
+      :type="editorType" 
+      :data="{ a: 1, b: 2 }"
+      aprop="foo"
+      bprop="bar"
+    />
   </div>
 </template>
 

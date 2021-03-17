@@ -1,6 +1,6 @@
 <template>
   <div>
-    EditorA: {{ val }}
+    EditorA: {{ val }}  {{ aprop }}
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
       type: Object,
       default: () => ({})
     },
+    aprop: String
   },
   computed: {
     val() {

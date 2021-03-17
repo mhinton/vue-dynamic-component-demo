@@ -1,6 +1,6 @@
 <template>
   <div>
-    EditorB: {{ val }}
+    EditorB: {{ val }}  {{ bprop }}
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
       type: Object,
       default: () => ({})
     },
+    bprop: String,
   },  
   computed: {
     val() {

@@ -14,14 +14,16 @@ export default {
     EditorB,
   },
   props: {
-    type: {
+    type: { // type of child editor control
       type: String,
       default: "EditorA"
     },
-    data: {
+    data: { // data object passed to child editor
       type: Object,
       default: () => ({})
-    }
+    },
+    aprop: String, // prop EditorA receives
+    bprop: String, // prop EditorB receives
   },
 }
 </script>
